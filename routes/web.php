@@ -25,6 +25,13 @@ Route :: get ('posts/{post}', function($post) {
         abort(404);
     }
 
+  $post =  cache()->remember("posts.{$post}" , 1200, function() use ($path) {
+
+        var_dump('file_get_contents');
+
+        return file_get_contents($path);
+    });
+    
     $post = file_get_contents($path);
 
     return view ('post', [
