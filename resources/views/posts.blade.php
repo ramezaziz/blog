@@ -1,20 +1,24 @@
-<x-layout>
-    @foreach($posts as $post)
+@extends('components.layout')
 
+@section('content')
+    @foreach($posts as $post)
         <article>
             <h1>
-                <a href="/posts/{{$post->slug}}">
+                <a href="/posts/my-first-post.html">
                     {{$post->title}}
                 </a>
+
             </h1>
-
-
             <div>
-                    {{ $post->excerpt }}
+                {!! $post->excerpt !!}
             </div>
-
         </article>
-
     @endforeach
+    <a href="/">Back </a>
+@endsection
 
-</x-layout>
+
+
+
+
+

@@ -5,5 +5,5 @@
 <link rel="stylesheet" href="/app.css">
 
 <body>
-@yield('content')
+  @yield('content')
 </body>
