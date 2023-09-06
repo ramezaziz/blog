@@ -8,6 +8,7 @@
         </h1>
         <div>
             {!! $post->body !!}
+{{--            to define html code in php   --}}
         </div>
     </article>
     <a href="/"> Back </a>

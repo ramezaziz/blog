@@ -14,7 +14,7 @@
             </div>
         </article>
     @endforeach
-    <a href="/">Back </a>
+
 @endsection
 
 
