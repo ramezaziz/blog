@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', function () {
     return view('posts', [
-        'posts' => Post::with('category')->get()
+        'posts' => Post::latest()->with('category', 'author')->get()
     ]);
 });
 
@@ -41,3 +41,8 @@ Route::get('categories/{category:slug}', function( Category $category) {
     ]);
 });
 
+Route::get('authors/{author:username}', function( \App\Models\User $author) {
+    return view('posts', [
+        'posts' =>$author->posts
+    ]);
+});
