@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-<body style="font-family: Open Sans, sans-serif">
+<body style="font-family: Open Sans, sans-serif" class="bg-gray-900 text-white">
 <section class="px-6 py-8">
     <nav class="md:flex md:justify-between md:items-center">
         <div>
@@ -16,9 +16,9 @@
         </div>
 
         <div class="mt-8 md:mt-0">
-            <a href="/" class="text-xs font-bold uppercase">Home Page</a>
+            <a href="/" class="transition-colors duration-500 bg-red-500 hover:bg-gray-100 hover:text-gray-900 mt-4 lg:mt-0 lg:ml-3 rounded-full text-sm font-bold   text-white uppercase py-3 px-8">Home Page</a>
 
-            <a href="#" class="bg-blue-500 ml-3 rounded-full text-xs font-semibold text-white uppercase py-3 px-5">
+            <a href="#" class="bg-blue-500 duration-500 hover:bg-gray-100 hover:text-gray-900 ml-3 rounded-full text-xs font-semibold text-white uppercase py-3 px-5">
                 Subscribe for Updates
             </a>
         </div>
@@ -26,8 +26,8 @@
 
    {{$slot}}
 
-    <footer class="bg-gray-100 border border-black border-opacity-5 rounded-xl text-center py-16 px-10 mt-16">
-        <img src="/images/lary-newsletter-icon.svg" alt="" class="mx-auto -mb-6" style="width: 145px;">
+    <footer class="bg-gray-900 border border-black border-opacity-5 rounded-xl text-center py-16 px-10 mt-16 ">
+        <img src="/images/lary-newsletter-icon.svg" alt="" class="mx-auto -mt-10" style="width: 150px;">
         <h5 class="text-3xl">Stay in touch with the latest posts</h5>
         <p class="text-sm mt-3">Promise to keep the inbox clean. No bugs.</p>
 
@@ -45,7 +45,7 @@
                     </div>
 
                     <button type="submit"
-                            class="transition-colors duration-300 bg-blue-500 hover:bg-blue-600 mt-4 lg:mt-0 lg:ml-3 rounded-full text-xs font-semibold text-white uppercase py-3 px-8"
+                            class="transition-colors duration-300 bg-blue-500 hover:bg-gray-100 hover:text-gray-900 mt-4 lg:mt-0 lg:ml-3 rounded-full text-sm font-bold   text-white uppercase py-3 px-8"
                     >
                         Subscribe
                     </button>
