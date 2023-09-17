@@ -20,8 +20,8 @@ class PostFactory extends Factory
     {
         return [
             'title' => fake()->sentence(),
-            'excerpt' => fake()->sentence(),
-            'body' => fake()->paragraph(),
+            'excerpt' => fake()->paragraph(4),
+            'body' =>   fake()->paragraph(10),
             'slug'=> fake()->slug,
             'user_id'=> User::factory(),
             'category_id'=> Category::factory(),

@@ -57,11 +57,13 @@
         </main>
 
 
+                <div class="text-center">
+                    <button type="submit"
+                              class="transition-colors duration-300 bg-blue-500 hover:bg-blue-800 mt-4 lg:mt-0 lg:mr-0 text-center rounded-full text-xs font-semibold text-white uppercase py-3 px-8">
+                        Subscribe
+                    </button>
+                </div>
 
-                        <button type="submit"
-                                class="transition-colors duration-300 bg-blue-500 hover:bg-blue-600 mt-4 lg:mt-0 lg:ml-3 rounded-full text-xs font-semibold text-white uppercase py-3 px-8">
-                            Subscribe
-                        </button>
                     </form>
                 </div>
             </div>
