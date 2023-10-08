@@ -45,7 +45,7 @@
                 </div>
 
                 <div>
-                    <a href="#"
+                    <a href="/posts/{{$post->slug}}"
                        class="transition-colors duration-300 text-sm font-semibold bg-blue-500 hover:bg-gray-100 hover:text-gray-900 rounded-full py-2 px-8"
                     >Read More</a>
                 </div>
