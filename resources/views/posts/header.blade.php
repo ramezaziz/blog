@@ -8,8 +8,6 @@
         <img src="/images/lary-head.svg" alt="Head of Lary the mascot">
     </h2>
 
-
-
     <div class="space-y-2 lg:space-y-0 lg:space-x-4 mt-8">
         <!--  Category -->
             <div class="relative flex lg:inline-flex items-center bg-gray-200  rounded-xl">
@@ -68,3 +66,4 @@
         </div>
     </div>
 </header>
+
