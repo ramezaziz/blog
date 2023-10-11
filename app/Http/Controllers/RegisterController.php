@@ -14,14 +14,15 @@ class RegisterController extends Controller
     public function store()
     {
        $attributes = request()->validate([
-           'name'=>'required',
-           'username'=>'required|min:3|max:255',
+           'name'=>'required|min:2',
+           'username'=>'required|min:3|max:255|unique:users,username',
            'password'=>'required|min:7|max:255',
-           'email'=>'required|max:255|email'
+           'email'=>'required|max:255|email|unique:users,email'
        ]);
 //       $attributes['password']=bcrypt($attributes['password']);
-       User::create($attributes);
-       return redirect('/');
+     $user = User::create($attributes);
+       auth()->login($user);
+       return redirect('/')->with('success', 'Your account has ben created.');
 
     }
 }

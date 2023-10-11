@@ -15,12 +15,21 @@
             </a>
         </div>
 
-        <div class="mt-8 md:mt-0">
-            <a href="/" class="transition-colors duration-500 bg-blue-900 hover:bg-gray-100 hover:text-gray-900 mt-4 lg:mt-0 lg:ml- rounded-full text-sm font-bold   text-white uppercase py-3 px-5">Home Page</a>
-            <a href="#" class="bg-blue-700 duration-500 hover:bg-gray-100 hover:text-gray-900 ml-2 rounded-full text-xs font-semibold text-white uppercase py-3 px-5">
+        <div class="mt-8 md:mt-0 flex items-center">
+            @auth
+                <span class="transition-colors duration-500 hover:text-blue-700 mt-1 lg:ml-3 rounded-full text-sm font-bold text-white uppercase py-3 px-5">Welcome {{auth()->user()->name}}</span>
+
+                <form method="POST" action="/logout">
+                    @csrf
+                    <button type="submit" class="bg-blue-700 duration-500 hover:bg-gray-100 hover:text-gray-900 mt-2 ml-2 rounded-full text-xs font-semibold text-white uppercase py-3 px-5">Log out</button>
+                </form>
+            @else
+                <a href="/register" class="transition-colors duration-500 bg-blue-500 hover:bg-gray-100  inline-flex hover:text-gray-900 mt-1 lg:ml-4 rounded-full text-sm font-bold text-white uppercase py-2 px-4">Register</a>
+                <a href="/login" class="transition-colors duration-500 bg-blue-700 hover:bg-gray-100  inline-flex hover:text-gray-900 mt-1 lg:mr-1 lg:ml-4 rounded-full text-sm font-bold text-white uppercase py-2 px-4">Log In</a>
+            @endauth
+            <a href="#" class="bg-blue-900 duration-500 hover:bg-gray-100 hover:text-gray-900 mt-1 ml-2 rounded-full text-xs font-semibold text-white uppercase py-3 px-5">
                 Subscribe for Updates
             </a>
-            <a href="/register" class="transition-colors duration-500 bg-blue-500 hover:bg-gray-100  inline-flex hover:text-gray-900 mt-4  lg:ml-3 rounded-full text-sm font-bold text-white uppercase py-3 px-5">Register</a>
 
 
         </div>
@@ -56,4 +65,5 @@
         </div>
     </footer>
 </section>
+<x-flash />
 </body>
