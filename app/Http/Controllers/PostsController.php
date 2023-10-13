@@ -29,4 +29,8 @@ class PostsController extends Controller
             'post' => $post
         ]);
     }
+    public function storeComment()
+    {
+
+    }
 }
