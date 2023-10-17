@@ -4,7 +4,7 @@ namespace App\Services;
 
 use MailchimpMarketing\ApiClient;
 
-class MailChimpNewsLetter
+class MailChimpNewsLetter implements Newsletter
 {
     public function __construct(protected ApiClient $client )
     {

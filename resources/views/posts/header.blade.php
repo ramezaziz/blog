@@ -52,15 +52,16 @@
 {{--            </svg>--}}
 {{--        </div>--}}
         <!-- Search -->
-        <div class="relative flex lg:inline-flex items-center bg-gray-200 text-gray-900 rounded-xl px-3 py-2">
-            <form method="GET" action="/">
+        <div class="relative flex lg:inline-flex items-center bg-gray-200 text-gray-900 rounded-full">
+            <form method="GET" action="/" >
                 @if(request('category'))
-                    <input type="hidden" name="category" value="{{request('category') }}">
+                    <input type="hidden" name="category"  value="{{request('category') }}">
                 @endif
-                <input type="text"
+                <input
+                       type="text"
                        name="search"
                        placeholder="Find something"
-                       class="bg-transparent placeholder-black font-semibold text-sm"
+                       class=" bg-gray-200 placeholder-gray-900 border border-transparent font-semibold text-sm rounded-full"
                        value="{{request('search')}}">
             </form>
         </div>
