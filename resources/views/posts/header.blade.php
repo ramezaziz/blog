@@ -8,11 +8,9 @@
         <img src="/images/lary-head.svg" alt="Head of Lary the mascot">
     </h2>
 
-
-
     <div class="space-y-2 lg:space-y-0 lg:space-x-4 mt-8">
         <!--  Category -->
-            <div class="relative flex lg:inline-flex items-center bg-gray-200  rounded-xl">
+            <div class="relative flex lg:inline-flex items-center bg-gray-200  rounded-full">
                 <x-category-dropdown/>
             </div>
 
@@ -54,17 +52,19 @@
 {{--            </svg>--}}
 {{--        </div>--}}
         <!-- Search -->
-        <div class="relative flex lg:inline-flex items-center bg-gray-200 text-gray-900 rounded-xl px-3 py-2">
-            <form method="GET" action="/">
+        <div class="relative flex lg:inline-flex items-center bg-gray-200 text-gray-100 rounded-full">
+            <form method="GET" action="/" >
                 @if(request('category'))
-                    <input type="hidden" name="category" value="{{request('category') }}">
+                    <input type="hidden" name="category"  value="{{request('category') }}">
                 @endif
-                <input type="text"
+                <input
+                       type="text"
                        name="search"
                        placeholder="Find something"
-                       class="bg-transparent placeholder-black font-semibold text-sm"
+                       class=" bg-gray-200 placeholder-gray-900 border border-transparent font-bold text-gray-900  text-sm rounded-full"
                        value="{{request('search')}}">
             </form>
         </div>
     </div>
 </header>
+
