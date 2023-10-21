@@ -2,7 +2,7 @@
     <!-- No surplus words or unnecessary actions. - Marcus Aurelius -->
     <x-dropdown>
         <x-slot name="trigger">
-            <button class="py-2 px-6 text-gray-900  mr-2 font-bold w-32 w-full flex lg:inline-flex ">
+            <button class="py-2 px-6 text-gray-900  mr-4 font-bold w-32 w-full flex lg:inline-flex ">
                 {{isset($currentCategory) ? ucwords($currentCategory->name) : 'Categories'}}
                 <x-icon name="down-arrow" class="absolute pointer-events-none" style="right: 12px"/>
             </button>

@@ -61,7 +61,7 @@
                        type="text"
                        name="search"
                        placeholder="Find something"
-                       class=" bg-gray-200 placeholder-gray-900 border border-transparent font-bold text-gray-100 text-sm rounded-full"
+                       class=" bg-gray-200 placeholder-gray-900 border border-transparent font-bold text-gray-900  text-sm rounded-full"
                        value="{{request('search')}}">
             </form>
         </div>
